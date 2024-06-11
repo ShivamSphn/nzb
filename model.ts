@@ -205,7 +205,7 @@ export class NZB implements Iterable<File> {
         this.files.map(({ poster, lastModified, subject, groups, segments }) =>
           [
             `  <file poster="${escape(poster)}" date="${
-              lastModified / 100
+              lastModified / 1000
             }" subject="${escape(subject)}">`,
 
             `    <groups>`,
