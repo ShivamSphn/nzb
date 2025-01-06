@@ -1,0 +1,41 @@
+{
+  "name": "nzb-toolkit",
+  "version": "1.0.0",
+  "description": "A modern toolkit for handling NZB files, built with Bun",
+  "type": "module",
+  "bin": {
+    "nzb": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch run src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist && chmod +x ./dist/index.js",
+    "clean": "rm -rf dist",
+    "test": "bun test",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix"
+  },
+  "keywords": [
+    "nzb",
+    "usenet",
+    "nntp",
+    "cli",
+    "toolkit"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@worker-tools/html-rewriter": "0.1.0-pre.17"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "prettier": "latest"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}
